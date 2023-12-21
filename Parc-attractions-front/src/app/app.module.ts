@@ -12,6 +12,7 @@ import { BilleterieComponent } from './billeterie/billeterie.component';
 import { BilletterieComponent } from './billetterie/billetterie.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { ActualitesComponent } from './actualites/actualites.component';
+import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ActualitesComponent } from './actualites/actualites.component';
     BilleterieComponent,
     BilletterieComponent,
     ConnectionComponent,
-    ActualitesComponent
+    ActualitesComponent,
+    PlanDuParcComponent
   ],
   imports: [
     BrowserModule,
