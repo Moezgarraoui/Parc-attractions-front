@@ -13,6 +13,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { ReservationBilletsComponent } from './reservation-billets/reservation-billets.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     BilletterieComponent,
     ConnectionComponent,
     ActualitesComponent,
-    PlanDuParcComponent
+    PlanDuParcComponent,
+    ReservationBilletsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

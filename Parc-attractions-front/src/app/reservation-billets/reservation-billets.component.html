@@ -1,0 +1,53 @@
+<p>AJOUT </p>
+<form (ngSubmit)="saveVisiteurs()" [formGroup]="nbVisForm">
+    <div class="card-header text-white bg-primary">
+       Ajout d'une réservation
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <!--<label for="id" class="form-label">Identifiant:</label>-->
+            <input type="number" class="form-control" id="id_res" name="id_res" hidden formControlName="id_res">
+        </div>
+        <div class="mb-3">
+            <label for="nbVisiteurs" class="form-label">Veuillez renseigner le nombre de visiteurs de la réservation :</label>
+            <input type="number" class="form-control" id="nbVisiteurs" name="nbVisiteurs" formControlName="nbVisiteurs">
+        </div>
+        
+    </div>
+    <div class="card-footer">
+        <button type="submit" [disabled]="nbVisForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+    </div>
+    </form>
+
+<form (ngSubmit)="save()" [formGroup]="resForm" *ngFor="let number of numbers">
+    <div class="card-header text-white bg-primary">
+        Ajout d'un visiteur
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <!--<label for="id" class="form-label">Identifiant:</label>-->
+            <input type="number" class="form-control" id="id" name="id" hidden formControlName="id">
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom:</label>
+            <input type="text" class="form-control" id="nom" name="nom" formControlName="nom">
+        </div>
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom:</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" formControlName="prenom">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" formControlName="age">
+        </div>
+        <div class="mb-3">
+            <label for="taille" class="form-label">Taille:</label>
+            <input type="number" class="form-control" id="taille" name="taille" formControlName="taille">
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="submit" [disabled]="resForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+    </div>
+    </form>
