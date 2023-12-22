@@ -13,6 +13,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { HotelPageComponent } from './hotel-page/hotel-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     BilletterieComponent,
     ConnectionComponent,
     ActualitesComponent,
-    PlanDuParcComponent
+    PlanDuParcComponent,
+    HotelPageComponent
   ],
   imports: [
     BrowserModule,

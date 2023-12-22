@@ -5,10 +5,11 @@ import { HotelComponent } from './hotel/hotel.component';
 import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { HotelPageComponent } from './hotel-page/hotel-page.component';
 
 const routes: Routes = [
   { path: "plan-du-parc", component: PlanDuParcComponent },
-  { path: "hotel", component: HotelComponent },
+  { path: "hotel", component: HotelPageComponent },
   { path: "reservation", component: ReservationComponent },
   { path: "accueil", component: AccueilComponent },  // Correction ici
   { path: "restaurant", component: RestaurantsComponent },
