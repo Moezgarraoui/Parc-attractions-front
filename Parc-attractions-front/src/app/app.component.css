@@ -1,0 +1,7 @@
+.card-header {
+    background-image: url("../assets/photoHeader.png");
+
+    background-repeat: no-repeat;
+
+    background-position-x: center;
+}
