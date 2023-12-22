@@ -17,6 +17,7 @@ import { ReservationBilletsComponent } from './reservation-billets/reservation-b
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HotelPageComponent } from './hotel-page/hotel-page.component';
+import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HotelPageComponent } from './hotel-page/hotel-page.component';
     ActualitesComponent,
     PlanDuParcComponent,
     ReservationBilletsComponent,
-    HotelPageComponent
+    HotelPageComponent,
+    RestaurantsPageComponent
   ],
   imports: [
     BrowserModule,

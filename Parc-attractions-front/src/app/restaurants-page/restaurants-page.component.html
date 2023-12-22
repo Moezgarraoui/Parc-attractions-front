@@ -1,0 +1,168 @@
+
+
+<div class="container mt-4">
+ 
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <img
+        src="/assets/restaurantCine.png"
+        class="d-block w-100"
+        alt="Image du restaurant Ciné-gastronomie"
+      />
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Ciné-gastronomie</h1>
+          <h2 class="card-subtitle mb-2 text-muted">Type de cuisine</h2>
+          <p class="card-text">Cuisine du monde</p>
+          <h2 class="card-subtitle mb-2 text-muted">Plats</h2>
+          <ul>
+            <li>
+              Amélie's Delight - Velouté de champignons sauvages accompagné de
+              croûtons à l'ail, inspiré par le film "Le Fabuleux Destin d'Amélie
+              Poulain".
+            </li>
+            <li>
+              Ratatouille Rhapsody - Ratatouille provençale, soigneusement
+              préparée avec des légumes frais et des herbes, inspirée par le
+              film d'animation "Ratatouille".
+            </li>
+            <li>
+              Couscous Casablanca - Couscous aux sept légumes, agneau braisé et
+              pois chiches, dans la pure tradition marocaine inspirée par le
+              film classique "Casablanca".
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <img
+        src="/assets/restaurantSymphonie.jpg"
+        class="d-block w-100"
+        alt="Image du restaurant Symphonie gourmande"
+      />
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Symphonie gourmande</h1>
+          <h2 class="card-subtitle mb-2 text-muted">Type de cuisine</h2>
+          <p class="card-text">Français</p>
+          <h2 class="card-subtitle mb-2 text-muted">Plats</h2>
+          <ul>
+            <li>
+              Escargots en Serenade - Escargots de Bourgogne dans une persillade
+              à l'ail, servis dans leurs coquilles, une symphonie de saveurs
+              traditionnelles.
+            </li>
+            <li>
+              Filet Mignon Duet - Filet mignon grillé, accompagné d'une sauce au
+              vin rouge et de pommes de terre dauphinoises. Une composition
+              classique pour les amateurs de viande.
+            </li>
+            <li>
+              Poissé Sonata - Filet de bar croustillant sur un lit de
+              ratatouille provençale, une mélodie de saveurs méditerranéennes.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <img
+        src="/assets/restaurantRock.jpg"
+        class="d-block w-100"
+        alt="Image du restaurant Hard Rock hideaway"
+      />
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Hard Rock hideaway</h1>
+          <h2 class="card-subtitle mb-2 text-muted">Type de cuisine</h2>
+          <p class="card-text">Américaine</p>
+          <h2 class="card-subtitle mb-2 text-muted">Plats</h2>
+          <ul>
+            <li>
+              AC/DC Angus Burger - Un hommage à l'incontournable groupe de rock,
+              ce burger charnu est garni de bacon fumé, de cheddar fort et de
+              notre sauce secrète "Thunderstruck". Accompagné de frites
+              croustillantes et d'une pincée de rock 'n' roll.
+            </li>
+            <li>
+              Guns N' Roses Grilled Steak - Une pièce de viande noble marinée
+              dans une sauce à l'ail et aux herbes, puis grillée à la
+              perfection. Servie avec des pommes de terre rôties au romarin et
+              une salade fraîche. Un festin digne des légendes du hard rock.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form>
+    
+    <div class="mb-3">
+      <label for="datePicker" class="form-label">Choisissez la date :</label>
+      <input type="date" class="form-control" id="datePicker" name="date">
+    </div>
+
+    
+    <div class="mb-3">
+      <label class="form-label">Souhaitez-vous réserver midi ou soir :</label>
+      <select class="form-select" name="time">
+        <option value="midi">Midi</option>
+        <option value="soir">Soir</option>
+      </select>
+    </div>
+
+  
+    <div class="mb-3">
+      <label for="restaurantSelect" class="form-label">Choisissez un restaurant :</label>
+      <select id="restaurantSelect" name="restaurant" class="form-select">
+        <option value="cineGastronomie">Ciné-gastronomie</option>
+        <option value="symphonieGourmande">Symphonie gourmande</option>
+        <option value="hardRockHideaway">Hard Rock hideaway</option>
+      </select>
+    </div>
+
+  
+    <div class="mb-3">
+      <label class="form-label">Souhaitez-vous faire plus de réservations de restaurants :</label>
+      <select class="form-select" name="moreReservations">
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
+
+  <div class="container mt-4">
+    <h2>Récapitulatif de la réservation</h2>
+    <p>Date de réservation : :</p>
+
+    <p>Nombre de billets : </p>
+    
+    <p>Hôtel réservé pour X nuits: </p>
+    <p>X restaurant réservé pour X repas: </p>
+    
+    <p>Total TTC : €</p>
+    <button type="submit" class="btn btn-success">Valider reservation</button>
+  </div>
+</div>
+
+  
+  
