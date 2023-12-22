@@ -1,0 +1,26 @@
+#restaurants > div:first-child {
+    display:flex;
+    justify-content:center;
+}
+
+#restaurants > div:not(:first-child){
+    display:flex;
+    justify-content:center;
+}
+
+#restaurants img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#restaurants p{
+    background-color:rgb(222, 195, 155);
+    text-align: center; 
+    margin-top: 5px;
+}
+
+#restaurant{
+    width:30%;
+    margin-right:10px;
+}
