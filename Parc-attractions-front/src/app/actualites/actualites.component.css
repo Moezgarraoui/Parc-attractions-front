@@ -1,3 +1,15 @@
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+}
+
+.card {
+    width: 44%; /* Ajustez la largeur de la carte en fonction de votre mise en page */
+    margin: 3%;
+}
+
 #actualites> div:first-child {
     display:flex;
     justify-content:center;
@@ -9,6 +21,6 @@
 }
 
 #actualite{
-    margin-right:10px;
-    width:50%
+    /* margin-right:10px; */
+    /* width:50% */
 }
