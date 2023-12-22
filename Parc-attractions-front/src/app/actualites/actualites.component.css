@@ -1,0 +1,14 @@
+#actualites> div:first-child {
+    display:flex;
+    justify-content:center;
+}
+
+#actualites> div:not(:first-child){
+    display:flex;
+    justify-content:center;
+}
+
+#actualite{
+    margin-right:10px;
+    width:50%
+}
