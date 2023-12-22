@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AccueilComponent } from './accueil/accueil.component';
+import { ActualitesComponent } from './actualites/actualites.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BilletterieComponent } from './billeterie/billetterie.component';
+import { ConnectionComponent } from './connection/connection.component';
 import { HotelComponent } from './hotel/hotel.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { BilleterieComponent } from './billeterie/billeterie.component';
-import { BilletterieComponent } from './billetterie/billetterie.component';
-import { ConnectionComponent } from './connection/connection.component';
-import { ActualitesComponent } from './actualites/actualites.component';
-import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
     ReservationComponent,
     RestaurantsComponent,
     AccueilComponent,
-    BilleterieComponent,
+    BilletterieComponent,
     BilletterieComponent,
     ConnectionComponent,
     ActualitesComponent,
@@ -30,7 +30,8 @@ import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
