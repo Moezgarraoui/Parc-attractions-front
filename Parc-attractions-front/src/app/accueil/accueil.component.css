@@ -1,11 +1,25 @@
-#description{
+#photoAccueil {
+    background-image:url("../../assets/GrandeRoue.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity:0.8;
+    height: 400px;
     display:flex;
+    flex-direction:column;
     justify-content:center;
+    
 }
 
-#texteDescription{
-    margin-left: 50px;
-    margin-right: 50px;
-    display:flex;
-    align-items:center;
+#duck{
+    border-radius:120px;
+    height: 150px;
 }
+
+
+#description p{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs
+}
+
+
