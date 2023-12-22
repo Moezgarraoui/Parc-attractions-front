@@ -67,7 +67,7 @@ export class ReservationBilletsComponent {
       this.showForm = true;
     });
   }
-  saveVisiteurs() {
+  saveNbVisiteurs() {
     this.numbers = Array.from({length: this.nbVisiteursCtrl.value}, (_, i) => i + 1);
     console.log(this.numbers);
   }

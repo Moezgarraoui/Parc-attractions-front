@@ -30,7 +30,9 @@ import { HotelPageComponent } from './hotel-page/hotel-page.component';
     BilletterieComponent,
     ConnectionComponent,
     ActualitesComponent,
-    PlanDuParcComponent
+    PlanDuParcComponent,
+    ReservationBilletsComponent,
+    HotelPageComponent
   ],
   imports: [
     BrowserModule,
