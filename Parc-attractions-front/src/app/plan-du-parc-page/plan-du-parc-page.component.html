@@ -1,7 +1,7 @@
 
 <div id="container-image-container">
 <div class="image-container">
-    <img src="../../assets/PlanDuParc.jpg" alt="Miniature du plan du parc" height="400px">
+    <img src="../../assets/PlanDuParc3.png" alt="Miniature du plan du parc" height="450px">
     <div class="button-attraction1">
         <button (click)="showAttraction1()">Grand Huit</button>
     </div>
@@ -20,7 +20,191 @@
 </div>
 </div>
 <br>
-               
+
+<div class="card" *ngIf="Attraction1" id="Attraction_1" #scrollElement1>
+    <br>
+    <div class="col-6 mx-auto">
+        <div><h1 id="titre" style="color:black;">Le grand huit!</h1></div>
+            <br>
+                <div class="card">
+                    <div class="card-body">
+
+                        <div id="titre">
+                            <div><h4>Thème: Rock !!!</h4></div>
+                            <div><img src="../../assets/CanardRock.png" height=100px alt="Canard rock"></div>
+                        </div><br>
+
+                        <u><h6>Descriptif:</h6></u>
+                        <p>Montagnes Russes du Rock Électrique: Montez à bord de ces montagnes russes palpitantes qui vous emmènent à travers des boucles et des virages synchronisés sur les rythmes effrénés du rock. Les haut-parleurs intégrés diffusent des classiques du rock qui accompagnent chaque montée, descente et virage.</p><br>
+                        <u><h6>Informations complementaires:</h6></u>
+                        <ul>
+                            <li>Intérêt par âge : Adulte </li>
+                            <li>Age minimal requis: 10 ans</li>
+                            <li>Taille minimale requise: 1m20</li>
+                            <li>Facteurs à risques: femmes enceintes, ...</li>
+                        </ul>
+
+                        <br>
+                        <div id="titre">
+                        <audio *ngIf="Attraction1" controls>
+                            <source src="../../assets/highwaytohell_cut.mp3" type="audio/mp3">
+                        </audio></div>
+                    </div>
+                </div>
+     </div>
+     <br>
+     <br>
+</div>
+
+<div class="card" *ngIf="Attraction2" id="Attraction_2" #scrollElement2>
+    <br>
+    <div class="col-6 mx-auto">
+        <div><h1 id="titre" style="color:white;">Le space simulator, pour décoller vers d'autres cieux!</h1></div>
+            <br>
+                <div class="card">
+                    <div class="card-body">
+
+                        <div id="titre">
+                            <div><h4>Thème: Musique de film</h4></div>
+                            <div><img src="../../assets/CanardEspace.jpg" height=100px alt="Canard espace"></div>
+                        </div><br>
+
+                        <u><h6>Descriptif:</h6></u>
+                        <p></p><br>
+                        <u><h6>Informations complementaires:</h6></u>
+                        <ul>
+                            <li>Intérêt par âge : </li>
+                            <li>Age minimal requis: </li>
+                            <li>Taille minimale requise:</li>
+                            <li>Facteurs à risques: </li>
+                        </ul>
+
+                        <br>
+                        <div id="titre">
+                        <audio *ngIf="Attraction2" controls>
+                            <source src="../../assets/SpaceOddity_cut.mp3" type="audio/mp3">
+                        </audio></div>
+                    </div>
+                </div>
+     </div>
+     <br>
+     <br>
+</div>
+
+<div class="card" *ngIf="Attraction3" id="Attraction_3" #scrollElement3>
+    <br>
+    <div class="col-6 mx-auto">
+        <div><h1 id="titre" style="color:black;">La grande nouveauté! Requiem pour un canard</h1></div>
+            <br>
+                <div class="card">
+                    <div class="card-body">
+
+                        <div id="titre">
+                            <div><h4>Thème: Musique classique</h4></div>
+                            <div><img src="../../assets/CanardSimple.png" height=100px alt="Canard"></div>
+                        </div><br>
+
+                        <u><h6>Descriptif:</h6></u>
+                        <p></p><br>
+                        <u><h6>Informations complementaires:</h6></u>
+                        <ul>
+                            <li>Intérêt par âge : </li>
+                            <li>Age minimal requis: </li>
+                            <li>Taille minimale requise:</li>
+                            <li>Facteurs à risques: </li>
+                        </ul>
+
+                        <br>
+                        <div id="titre">
+                        <audio *ngIf="Attraction3" controls>
+                            <source src="../../assets/canardsound_cut.mp3" type="audio/mp3">
+                        </audio></div>
+                    </div>
+                </div>
+     </div>
+     <br>
+     <br>
+</div>
+
+<div class="card" *ngIf="Attraction4" id="Attraction_4" #scrollElement4>
+    <br>
+    <div class="col-6 mx-auto">
+        <div><h1 id="titre" style="color:black;">Small world universe</h1></div>
+            <br>
+                <div class="card">
+                    <div class="card-body">
+
+                        <div id="titre">
+                            <div><h4>Thème: Musique pour enfant</h4></div>
+                            <div><img src="../../assets/CanardPoupee.png" height=100px alt="Canard poupee"></div>
+                        </div><br>
+
+                        <u><h6>Descriptif:</h6></u>
+                        <p></p><br>
+                        <u><h6>Informations complementaires:</h6></u>
+                        <ul>
+                            <li>Intérêt par âge : </li>
+                            <li>Age minimal requis: </li>
+                            <li>Taille minimale requise:</li>
+                            <li>Facteurs à risques: </li>
+                        </ul>
+
+                        <br>
+                        <div id="titre">
+                        <audio *ngIf="Attraction4" controls>
+                            <source src="../../assets/itsasmallworld_cut.mp3" type="audio/mp3">
+                        </audio></div>
+                    </div>
+                </div>
+     </div>
+     <br>
+     <br>
+</div>
+
+<div class="card" *ngIf="Attraction5" id="Attraction_5" #scrollElement5>
+    <br>
+    <div class="col-6 mx-auto">
+        <div><h1 id="titre" style="color:white;">L'attraction phare: le Final count down !!</h1></div>
+            <br>
+                <div class="card">
+                    <div class="card-body">
+
+                        <div id="titre">
+                            <div><h4>Thème: Eclectique!</h4></div>
+                            <div><img src="../../assets/CanardMusique.jpg" height=100px alt="Canard musique"></div>
+                        </div><br>
+
+                        <u><h6>Descriptif:</h6></u>
+                        <p></p><br>
+                        <u><h6>Informations complementaires:</h6></u>
+                        <ul>
+                            <li>Intérêt par âge : </li>
+                            <li>Age minimal requis: </li>
+                            <li>Taille minimale requise:</li>
+                            <li>Facteurs à risques: </li>
+                        </ul>
+
+                        <br>
+                        <div id="titre">
+                        <audio *ngIf="Attraction5" controls>
+                            <source src="../../assets/finalcountdown_cut.mp3" type="audio/mp3">
+                        </audio></div>
+                    </div>
+                </div>
+     </div>
+     <br>
+     <br>
+</div>
+
+
+<!--
+<a (click)="showAttraction1()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Grand Huit</i></a> <span> - </span>
+<a (click)="showAttraction2()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Space simulator</i></a><span> - </span>
+<a (click)="showAttraction3()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Pêche aux canards</i></a><span> - </span>
+<a (click)="showAttraction4()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Small world</i></a><span> - </span>
+<a (click)="showAttraction5()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Final count down</i></a><span> - </span>
+
+<div id="image"><img src="../../assets/PlanDuParc.jpg" alt="Miniature plan du parc" height="300px"></div>
 
 <div class="card" *ngIf="Attraction1" id="Attraction" #scrollElement1>
     <br>
@@ -30,7 +214,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la première carte -->
                         <div id="image"><img src="../../assets/CanardGrandHuit.png" alt="attraction du Grand Huit "></div>
                     </div>
                 </div>
@@ -39,7 +222,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la deuxième carte -->
                         <div id="titre"><h4>Thème: Rock !!!</h4></div><br>
                         <u><h6>Descriptif:</h6></u>
                         <p>Montagnes Russes du Rock Électrique: Montez à bord de ces montagnes russes palpitantes qui vous emmènent à travers des boucles et des virages synchronisés sur les rythmes effrénés du rock. Les haut-parleurs intégrés diffusent des classiques du rock qui accompagnent chaque montée, descente et virage.</p><br>
@@ -63,7 +245,7 @@
     </div>
 </div>
 
-<div class="card" *ngIf="Attraction2" id="Attraction" #scrollElement2>
+<div class="card" *ngIf="Attraction3" id="Attraction" #scrollElement2>
     <br>
     <div><h3 id="titre">Le space simulator, pour décoller vers d'autres cieux!</h3></div>
     <div class="container mt-4">
@@ -71,7 +253,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la première carte -->
                         <div id="image"><img src="../../assets/CanardSpaceSimulator.png" alt="atttraction du space simulator"></div>
                     </div>
                 </div>
@@ -80,7 +261,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la deuxième carte -->
                         <div id="titre"><h4>Thème: </h4></div><br>
                         <u><h6>Descriptif</h6></u>
                         <p></p><br>
@@ -113,7 +293,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la première carte -->
                         <div id="image"><img src="../../assets/CanardPecheCanard.png" alt="attraction pêche aux canards"></div>
                     </div>
                 </div>
@@ -122,7 +301,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la deuxième carte -->
                         <div id="titre"><h4>Thème: </h4></div><br>
                         <u><h6>Descriptif</h6></u>
                         <p></p><br>
@@ -154,7 +332,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la première carte -->
                         <div id="image"><img src="../../assets/CanardSmallWolrd.png" alt="attraction du small world"></div>
                     </div>
                 </div>
@@ -163,7 +340,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la deuxième carte -->
                         <div id="titre"><h4>Thème: </h4></div><br>
                         <u><h6>Descriptif</h6></u>
                         <p></p><br>
@@ -195,7 +371,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la première carte -->
                         <div id="image"><img src="../../assets/CanardQuizzMusical.png" alt="Attraction final count down"></div>
                     </div>
                 </div>
@@ -204,7 +379,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- Contenu de la deuxième carte -->
                         <div id="titre"><h4>Thème: </h4></div><br>
                         <u><h6>Descriptif</h6></u>
                         <p></p><br>
@@ -228,13 +402,4 @@
     </div>
 </div>
 
-
-<!--
-<a (click)="showAttraction1()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Grand Huit</i></a> <span> - </span>
-<a (click)="showAttraction2()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Space simulator</i></a><span> - </span>
-<a (click)="showAttraction3()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Pêche aux canards</i></a><span> - </span>
-<a (click)="showAttraction4()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Small world</i></a><span> - </span>
-<a (click)="showAttraction5()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Final count down</i></a><span> - </span>
-
-<div id="image"><img src="../../assets/PlanDuParc.jpg" alt="Miniature plan du parc" height="300px"></div>
 -->

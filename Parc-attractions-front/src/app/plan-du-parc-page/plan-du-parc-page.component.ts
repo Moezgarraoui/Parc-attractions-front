@@ -1,6 +1,5 @@
 
 import {Component, ElementRef, ViewChild} from '@angular/core';
-
 @Component({
   selector: 'app-plan-du-parc-page',
   templateUrl: './plan-du-parc-page.component.html',

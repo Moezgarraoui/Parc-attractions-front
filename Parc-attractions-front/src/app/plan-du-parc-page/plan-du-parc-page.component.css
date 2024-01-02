@@ -7,8 +7,39 @@
     justify-content:center;
 }
 
-#Attraction{
-    background-color: antiquewhite;
+#Attraction_1{
+    background-image:url("../../assets/GrandHuit2.png");
+    background-size: contain;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_2{
+    background-image:url("../../assets/SpaceSimulator.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_3{
+    background-image:url("../../assets/PecheCanard.png");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_4{
+    background-image:url("../../assets/smallworld2.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_5{
+    background-image:url("../../assets/quizz-musical.jpg");
+    background-size: contain;
+    background-position: center;
+    opacity:0.8;
 }
 
 #container-image-container{
