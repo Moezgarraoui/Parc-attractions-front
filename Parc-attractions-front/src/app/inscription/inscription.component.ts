@@ -20,17 +20,18 @@ export class InscriptionComponent implements OnInit {
       numero: [''],
       ville: [''],
       voie: [''],
-      codePostal: [''],
-      identifiant: ['', Validators.required],
+      cp: [''],
+      login: ['', Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(5)])]
     });
   }
-
+  
   Registration() {
     this.utilisateurService.inscription(this.myForm.value).subscribe(
       (response) => {
         console.log('Inscription réussie:', response);
         // Ajoutez ici la logique de redirection ou d'affichage de messages de succès
+        this.router.navigate(['/connection']); 
       },
       (error) => {
         console.error('Erreur lors de l\'inscription:', error);

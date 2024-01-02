@@ -19,13 +19,17 @@
    public voie?: string;
    public ville? : string;
    public cp ?:string
-   public compte? : Compte[];
+   public compte? : Compte;
    constructor( ) {}
  }
  export class Compte {
-   public id?: number
-   public login?: string
-    public password?: string
-    public admin?: boolean
-   constructor( ) {}
- }
+  public login?: string;
+  public password?: string;
+  public active?: boolean;
+
+  constructor(login: string, password: string, active: boolean) {
+    this.login = login;
+    this.password = password;
+    this.active = active;
+  }
+}
