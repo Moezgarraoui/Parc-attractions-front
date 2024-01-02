@@ -1,0 +1,12 @@
+#titre{
+text-align: center;
+}
+
+#image{
+display:flex;
+justify-content:center;
+}
+
+#Attraction{
+    background-color: antiquewhite;
+}

@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HotelPageComponent } from './hotel-page/hotel-page.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
+import { PlanDuParcPageComponent } from './plan-du-parc-page/plan-du-parc-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.co
     PlanDuParcComponent,
     ReservationBilletsComponent,
     HotelPageComponent,
-    RestaurantsPageComponent
+    RestaurantsPageComponent,
+    PlanDuParcPageComponent
   ],
   imports: [
     BrowserModule,
