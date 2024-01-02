@@ -1,8 +1,15 @@
-h3{
-    text-align: center;
-    margin-bottom: 50px;
+.carousel{
+    height: 100%;
 }
-.d-block w-100{
-    width: 100%;
-    height: auto;
+
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item img{
+    height: 100%;
 }
