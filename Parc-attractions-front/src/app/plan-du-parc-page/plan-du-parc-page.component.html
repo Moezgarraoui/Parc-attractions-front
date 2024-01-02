@@ -1,14 +1,26 @@
 
-<a (click)="showAttraction1()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Grand Huit</i></a> <span> - </span>
-<a (click)="showAttraction2()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Space simulator</i></a><span> - </span>
-<a (click)="showAttraction3()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Pêche aux canards</i></a><span> - </span>
-<a (click)="showAttraction4()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Small world</i></a><span> - </span>
-<a (click)="showAttraction5()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Final count down</i></a><span> - </span>
-
-<div id="image"><img src="../../assets/PlanDuParc.jpg" alt="Miniature plan du parc" height="300px"></div>
-                   
+<div id="container-image-container">
+<div class="image-container">
+    <img src="../../assets/PlanDuParc.jpg" alt="Miniature du plan du parc" height="400px">
+    <div class="button-attraction1">
+        <button (click)="showAttraction1()">Grand Huit</button>
+    </div>
+    <div class="button-attraction2">
+        <button (click)="showAttraction2()">Space simulator</button>
+    </div>
+    <div class="button-attraction3">
+        <button (click)="showAttraction3()">Requiem pour <br> un canard</button>
+    </div>
+    <div class="button-attraction4">
+        <button (click)="showAttraction4()">Small world</button>
+    </div>
+    <div class="button-attraction5">
+        <button (click)="showAttraction5()">Final count <br> down</button>    
+    </div>
+</div>
+</div>
 <br>
-<br>
+               
 
 <div class="card" *ngIf="Attraction1" id="Attraction">
     <br>
@@ -97,7 +109,7 @@
 
 <div class="card" *ngIf="Attraction3" id="Attraction">
     <br>
-    <div><h3 id="titre">Le grand classique: la pêche aux canards</h3></div>
+    <div><h3 id="titre">La grande nouveauté! Requiem pour un canard</h3></div>
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-6">
@@ -217,3 +229,14 @@
         </div>
     </div>
 </div>
+
+
+<!--
+<a (click)="showAttraction1()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Grand Huit</i></a> <span> - </span>
+<a (click)="showAttraction2()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Space simulator</i></a><span> - </span>
+<a (click)="showAttraction3()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Pêche aux canards</i></a><span> - </span>
+<a (click)="showAttraction4()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Small world</i></a><span> - </span>
+<a (click)="showAttraction5()" class="btn btn-success btn-lg"><i class="bi bi-check-lg">Final count down</i></a><span> - </span>
+
+<div id="image"><img src="../../assets/PlanDuParc.jpg" alt="Miniature plan du parc" height="300px"></div>
+-->

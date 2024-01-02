@@ -1,12 +1,66 @@
 #titre{
-text-align: center;
+    text-align: center;
 }
 
 #image{
-display:flex;
-justify-content:center;
+    display:flex;
+    justify-content:center;
 }
 
 #Attraction{
     background-color: antiquewhite;
 }
+
+#container-image-container{
+    display:flex;
+    justify-content:center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+.button-attraction1 {
+    position: absolute;
+    top: 33%; 
+    left: 78%; 
+    transform: translate(-50%, -50%);/* ajuste le positionnement au centre de l'image même si la taille de l'image change*/
+}
+.button-attraction2 {
+    position: absolute;
+    top: 83%; 
+    left: 23%; 
+    transform: translate(-50%, -50%); 
+}
+.button-attraction3 {
+    position: absolute;
+    top:30%; 
+    left: 13%; 
+    transform: translate(-50%, -50%);
+}
+.button-attraction4 {
+    position: absolute;
+    top:6%; 
+    left: 48%; 
+    transform: translate(-50%, -50%);
+}
+.button-attraction5 {
+    position: absolute;
+    top:45%; 
+    left: 43%; 
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size:20px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    font-size:24px;
+  }
