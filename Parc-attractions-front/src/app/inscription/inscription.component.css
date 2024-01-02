@@ -1,0 +1,19 @@
+.my-form {
+    background-color: #fff;
+    border-radius: 15px; /* Réduire le rayon de la bordure pour un aspect plus compact */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 15px; /* Réduire la marge intérieure */
+    width: 500px; /* Ajuster la largeur selon vos besoins */
+    max-width: 100%; /* Assurer que la largeur n'excède pas la largeur de l'écran */
+    margin: auto;
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Espace supplémentaire au-dessus du bouton */
+}
+
+.center-button button {
+    width: 100%; /* Bouton prend toute la largeur disponible */
+}

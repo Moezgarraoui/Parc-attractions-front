@@ -1,1 +1,35 @@
-<p>connection works!</p>
+<div class="card mt-3">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <h2 class="form-title">Connexion</h2>
+  
+      <div class="form-group">
+        <label for="username" class="form-label">Identifiant :</label>
+        <input type="text" class="form-control" formControlName="login">
+      </div>
+      
+      <div class="form-group">
+        <label for="password" class="form-label">Mot de passe :</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        <div *ngIf="passwordCtrl.hasError('required')" class="error-message">
+          Le mot de passe est requis.
+        </div>
+        <div *ngIf="passwordCtrl.hasError('minlength')" class="error-message">
+          Au moins 5 caractères.
+        </div>
+      </div>
+  
+      <div class="form-group text-center">
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i> Connexion</button>
+      </div>
+      
+    
+
+    <!-- Message d'invitation à s'inscrire -->
+    <div class="col-12 text-center mt-3">
+        <p>Vous n'êtes pas encore inscrit ?</p>
+        <a routerLink="/inscription" class="btn btn-link">S'inscrire</a>
+
+    </div>
+    </form>
+  </div>
+  
