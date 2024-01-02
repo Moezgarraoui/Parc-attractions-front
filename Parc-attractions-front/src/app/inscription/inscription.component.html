@@ -1,0 +1,60 @@
+<div class="card mt-3">
+    <form [formGroup]="myForm" (ngSubmit)="Registration()" class="row g-3 my-form">
+      <h2 class="form-title">Inscription</h2>
+  
+      <div class="col-md-6">
+        <label for="inputNom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="inputNom" placeholder="Votre nom" formControlName="nom">
+        <div *ngIf="myForm.controls['nom'].hasError('required')" class="error-message">
+            Le nom est requis.
+          </div>
+      </div>
+  
+      <div class="col-md-6">
+        <label for="inputPrenom" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="inputPrenom" placeholder="Votre prénom" formControlName="prenom">
+        <div *ngIf="myForm.controls['prenom'].hasError('required')" class="error-message">
+            Le prénom est requis.
+          </div>
+      </div>
+  
+      <div class="col-12">
+        <label for="inputNumero" class="form-label">Numéro</label>
+        <input type="text" class="form-control" id="inputNumero" placeholder="Votre numéro" formControlName="numero">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="inputVille" class="form-label">Ville</label>
+        <input type="text" class="form-control" id="inputVille" placeholder="Votre ville" formControlName="ville">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="inputVoie" class="form-label">Voie</label>
+        <input type="text" class="form-control" id="inputVoie" placeholder="Votre voie" formControlName="voie">
+      </div>
+  
+      <div class="col-12">
+        <label for="inputCodePostal" class="form-label">Code Postal</label>
+        <input type="text" class="form-control" id="inputCodePostal" placeholder="Votre code postal" formControlName="codePostal">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="inputIdentifiant" class="form-label">Identifiant</label>
+        <input type="text" class="form-control" id="inputIdentifiant" placeholder="Votre identifiant" formControlName="identifiant">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="inputPassword" class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Votre mot de passe" formControlName="password">
+        <div *ngIf="myForm.controls['password'].hasError('required')" class="error-message">
+            Le mot de passe est requis.
+          </div>
+      </div>
+  
+      <div class="col-12 center-button">
+        <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">S'inscrire</button>
+      </div>
+  
+    </form>
+  </div>
+  
