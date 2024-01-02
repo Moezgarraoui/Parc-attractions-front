@@ -6,11 +6,12 @@ import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HotelPageComponent } from './hotel-page/hotel-page.component';
-
 import { ReservationBilletsComponent } from './reservation-billets/reservation-billets.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
+import { PlanDuParcPageComponent } from './plan-du-parc-page/plan-du-parc-page.component';
+
 const routes: Routes = [
-  { path: "plan-du-parc", component: PlanDuParcComponent },
+  { path: "plan-du-parc", component: PlanDuParcPageComponent },
   { path: "hotel", component: HotelPageComponent },
   { path: "reservation", component: ReservationComponent },
   { path: "accueil", component: AccueilComponent },  // Correction ici
