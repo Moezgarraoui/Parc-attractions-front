@@ -19,6 +19,8 @@ import { ReservationBilletsComponent } from './reservation-billets/reservation-b
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,43 +1,32 @@
+<p>AJOUT </p>
+<form (ngSubmit)="saveNbVisiteurs()" [formGroup]="nbVisForm">
+    <div class="card-header text-white bg-primary">
+       Ajout d'une réservation
+    </div>
+    <div class="card-body"> 
+        <div class="mb-3 mt-3">
+            <!--<label for="id" class="form-label">Identifiant:</label>-->
+            <input type="number" class="form-control" id="id_res" name="id_res" hidden formControlName="id_res">
+        </div>
+        <div class="mb-3">
+            <label for="nbVisiteurs" class="form-label">Veuillez renseigner le nombre de visiteurs de la réservation :</label>
+            <input type="number" class="form-control" id="nbVisiteurs" name="nbVisiteurs" formControlName="nbVisiteurs">
+        </div>
+        
+    </div>
+    <div class="card-footer">
+        <button type="submit" [disabled]="nbVisForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
+        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
+    </div>
+</form>
 
-<p> BLA BLA BLA </p>
-<button type="button" (click)="addReservation()"> Réservez vos billets pour notre formidable parc </button>
-<div [formGroup]="visiteursForm2" *ngIf="showForm==true">
-    <label for="date_debut" class="form-label"> Quel est la date du début de votre visite ? </label>
-    <input type="date" id="date_debut"> 
-    <label for="date_fin" class="form-label"> Quel est la date de la fin de votre visite ? </label>
-    <input type="date" id="date_fin"> 
+<div [formGroup]="visiteursForm2">
     <ng-container formArrayName="visiteurs2">
         <ng-container *ngFor="let visForm2 of visiteurs2.controls; let i=index">
-            <div class="new_Visiteur" [formGroupName]="i">
-                <label for="id" class="form-label" hidden>Identifiant:</label>
-                <input type="number" class="form-control" id="id" name="id" hidden formControlName="id">
             
-                <label for="nom" class="form-label">Nom:</label>
-                <input type="text" class="form-control" id="nom" name="nom" formControlName="nom">
-            
-                <label for="prenom" class="form-label">Prénom:</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" formControlName="prenom">
-           
-                <label for="age" class="form-label">Age:</label>
-                <input type="number" class="form-control" id="age" name="age" formControlName="age">
-          
-                <label for="taille" class="form-label">Taille:</label>
-                <input type="number" class="form-control" id="taille" name="taille" formControlName="taille">
-               <!-- <label for="reservation" class="form-label"  >Reservation :</label>
-                <input type="number" class="form-control" id="id_res" name="reservation"  formControlName="reservation">-->
-       </div>
         </ng-container>
-        <button type="button" (click)="addVisiteur2()"> Ajouter un visiteur </button>
-        <div *ngIf="visiteurs2.length > 0">
-            <button type="button" (click)="saveArray()"> Valider les visiteurs de la réservation </button>
-        </div>
     </ng-container>
-    
 </div>
-
-
-
-    
 <!--<form (ngSubmit)="onSubmit()" [formGroup]="visiteursForm">
 <div formArrayName="visiteurs">
     <div *ngFor="let vis of visiteursControlsArray; let i=index">

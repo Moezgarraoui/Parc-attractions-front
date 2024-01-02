@@ -21,7 +21,7 @@ export class VisiteurService {
     if(Visiteur.id) {
       return this.http.put<Visiteur>("http://localhost:8080/api/visiteur/"+Visiteur.id, Visiteur);
     }
-
+    
     return this.http.post<Visiteur>("http://localhost:8080/api/visiteur", Visiteur);
   }
 

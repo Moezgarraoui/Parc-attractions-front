@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { Visiteur } from '../model';
+
+import { Component, Input } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
+import { Reservation, Visiteur } from '../model';
 import { Observable } from 'rxjs';
 import { VisiteurService } from './visiteur.service';
+import { ReservationService } from './reservation.service';
+import { HttpResponse } from '@angular/common/http';
 @Component({
   selector: 'app-reservation-billets',
   templateUrl: './reservation-billets.component.html',
@@ -12,7 +15,7 @@ import { VisiteurService } from './visiteur.service';
 export class ReservationBilletsComponent {
   resForm!: FormGroup;
   nbVisForm!:FormGroup;
-
+  visiteurs!: FormArray;
   id_resCtrl!: FormControl;
   nbVisiteursCtrl!:FormControl;
   idCtrl!: FormControl;
@@ -20,68 +23,80 @@ export class ReservationBilletsComponent {
   prenomCtrl!: FormControl;
   ageCtrl!: FormControl;
   tailleCtrl!: FormControl;
+  reservationCtrl!:FormControl;
   numbers:number[]=[];
-
+visiteursForm!:FormGroup;
   showForm: boolean = false;
   visiteurs$!: Observable<Visiteur[]>;
-  constructor(private visiteurService: VisiteurService, private formBuilder: FormBuilder) {
-    this.load();
+  reservations$!: Observable<Reservation[]>;
+  currentReservation!:Reservation;
+  visiteur!:Visiteur;
+visiteurs2$!: Observable<Visiteur[]>;
+visiteursForm2!:FormGroup;
+  
+  get visiteurs2() {
+    return this.visiteursForm2.controls["visiteurs2"] as FormArray;
+  }
+  addReservation(){
+    this.currentReservation=new Reservation();
+    this.reservationService.save(this.currentReservation).subscribe(resp=>{
+      this.currentReservation=resp;
+    });
+    console.log(this.currentReservation);
+    this.showForm=true;
+  }
+  saveArray(){
+    
+    this.visiteurs2.value.forEach((v: Visiteur) => { 
+      v.reservation=new Reservation();
+      v.reservation.id=this.currentReservation.id;
+      this.visiteurService.save(v).subscribe(resp=> {
+        this.load2();
+        
+      });
+    });
+  }
+  addVisiteur2(){
+   
+    const visForm2 = this.formBuilder.group({
+      id:new FormControl,
+      nom: new FormControl,
+      prenom: new FormControl,
+      age: new FormControl,
+      taille: new FormControl,
+    })
+
+    this.visiteurs2.push(visForm2);
+  }
+  constructor(private visiteurService: VisiteurService, private reservationService: ReservationService,private formBuilder: FormBuilder) {
+   
   }
   ngOnInit(): void {
-    this.nbVisiteursCtrl=this.formBuilder.control('');
-    this.idCtrl = this.formBuilder.control('');
-    this.nomCtrl = this.formBuilder.control('');
-    this.prenomCtrl = this.formBuilder.control('');
-    this.ageCtrl = this.formBuilder.control('');
-    this.tailleCtrl = this.formBuilder.control('');
-
-    this.resForm = this.formBuilder.group( {
-      id:this.idCtrl,
-      nom: this.nomCtrl,
-      prenom: this.prenomCtrl,
-      age: this.ageCtrl,
-      taille: this.tailleCtrl
-    });
-
-    this.nbVisForm=this.formBuilder.group({
-      nbVisiteurs:this.nbVisiteursCtrl,
-      id_res:this.id_resCtrl
+ 
+    this.visiteursForm2=this.formBuilder.group({
+      dateDebut : new FormControl,
+      visiteurs2 : this.formBuilder.array([])
     })
+  
+   
   }
   load() {
     this.visiteurs$ = this.visiteurService.findAll();
   }
-
+  load2() {
+    this.visiteurs2$ = this.visiteurService.findAll();
+  }
+  loadReservations(){
+    this.reservations$ = this.reservationService.findAll();
+  }
   list() {
     return this.visiteurs$;
   }
-
-  add() {
-    this.resForm.reset();
-    this.showForm = true;
+  get visiteursArray(){
+    return this.visiteursForm.get('visiteurs') as FormArray;
   }
-
-  edit(id?: number) {
-    this.visiteurService.findById(id).subscribe(resp => {
-      this.resForm.patchValue(resp);
-      this.showForm = true;
-    });
+  get visiteursControlsArray(){
+    return this.visiteursArray.controls as FormGroup[];
   }
-  saveNbVisiteurs() {
-    this.numbers = Array.from({length: this.nbVisiteursCtrl.value}, (_, i) => i + 1);
-    console.log(this.numbers);
-  }
-  save() {
-    this.visiteurService.save(this.resForm.value).subscribe(resp => this.load());
-    this.cancel();
-  }
-
-  remove(id?: number) {
-    this.visiteurService.delete(id).subscribe(resp => this.load());
-  }
-
-  cancel() {
-    this.showForm = false;
-    this.resForm.reset();
-  }
+  
 }
