@@ -5,7 +5,6 @@ import { HotelPageComponent } from './hotel-page/hotel-page.component';
 import { PlanDuParcComponent } from './plan-du-parc/plan-du-parc.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { HotelPageComponent } from './hotel-page/hotel-page.component';
 
 import { ConnectionComponent } from './connection/connection.component';
 import { InscriptionComponent } from './inscription/inscription.component';

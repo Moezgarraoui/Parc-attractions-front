@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,11 +18,6 @@ import { ReservationBilletsComponent } from './reservation-billets/reservation-b
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { ReservationBilletsComponent } from './reservation-billets/reservation-billets.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { HotelPageComponent } from './hotel-page/hotel-page.component';
-import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 import { PlanDuParcPageComponent } from './plan-du-parc-page/plan-du-parc-page.component';
 import { FormsModule } from '@angular/forms';
 
@@ -37,15 +31,13 @@ import { FormsModule } from '@angular/forms';
     RestaurantsComponent,
     AccueilComponent,
     BilletterieComponent,
-    BilletterieComponent,
     ConnectionComponent,
     ActualitesComponent,
     PlanDuParcComponent,
     ReservationBilletsComponent,
     HotelPageComponent,
     RestaurantsPageComponent,
-    PlanDuParcPageComponent
-    RestaurantsPageComponent,
+    PlanDuParcPageComponent,
     InscriptionComponent,
     ConnectionComponent
   ],
