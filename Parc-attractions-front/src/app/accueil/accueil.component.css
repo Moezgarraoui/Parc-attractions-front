@@ -19,7 +19,6 @@
 #description p{
     font-size: 20px;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs
 }
 
 .arrow-container {
@@ -32,7 +31,7 @@
   }
   
 .arrow {
-    font-size: 2rem; /* Ajustez la taille de l'icône selon vos besoins */
+    font-size: 2rem; /* Ajustez la taille de l'icône*/
   }
   
 .arrow:hover {
