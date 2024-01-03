@@ -2,10 +2,10 @@
     text-align: center;
 }
 
-#image{
+/*#image{
     display:flex;
     justify-content:center;
-}
+}*/
 
 #Attraction_1{
     background-image:url("../../assets/GrandHuit2.png");
@@ -40,6 +40,10 @@
     background-size: contain;
     background-position: center;
     opacity:0.8;
+}
+
+#shadow_box{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 #container-image-container{
