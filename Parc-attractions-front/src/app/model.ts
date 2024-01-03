@@ -34,3 +34,17 @@
     this.active = active;
   }
 }
+  export class Restaurant {
+    public id?: number;
+    public titre?: string;
+    public specialite?: string;
+    public description?: string;
+
+    constructor(id: number, titre: string, specialite: string, description: string) {
+      this.id = id;
+      this.titre = titre;
+      this.specialite = specialite;
+      this.description = description;
+    }
+
+  }

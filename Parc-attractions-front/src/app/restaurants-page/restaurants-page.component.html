@@ -1,6 +1,46 @@
-
+<form class="form-inline" style="display: flex;">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="recherche" [ngModelOptions]="{ standalone: true }">
+  <button class="btn btn-primary" type="submit">Search</button>
+</form>
 
 <div class="container mt-4">
+
+  <div *ngFor="let restaurant of rechercher()" class="row">
+    <div class="col-md-6 mb-4">
+      <img
+        src="/assets/restaurantCine.png"
+        class="d-block w-100"
+        alt="Image du restaurant Ciné-gastronomie"
+      />
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">{{restaurant.titre}}</h1>
+          <h2 class="card-subtitle mb-2 text-muted">Type de cuisine</h2>
+          <p class="card-text">{{restaurant.specialite}}</p>
+          <h2 class="card-subtitle mb-2 text-muted">Plats</h2>
+          <ul>
+            <li>
+              {{restaurant.description}}
+            </li>
+            <li>
+              Ratatouille Rhapsody - Ratatouille provençale, soigneusement
+              préparée avec des légumes frais et des herbes, inspirée par le
+              film d'animation "Ratatouille".
+            </li>
+            <li>
+              Couscous Casablanca - Couscous aux sept légumes, agneau braisé et
+              pois chiches, dans la pure tradition marocaine inspirée par le
+              film classique "Casablanca".
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
  
   <div class="row">
     <div class="col-md-6 mb-4">
