@@ -21,6 +21,7 @@ export class AuthService {
           this.client = resp;
           this.currentClientId = resp.id; // Enregistre l'ID du client
           localStorage.setItem("user", JSON.stringify(this.client));
+          localStorage.setItem("user_id",JSON.stringify(this.currentClientId));
           this.router.navigate(["/accueil"]);
         },
         error => {
@@ -34,6 +35,7 @@ export class AuthService {
     this.client = undefined;
     this.currentClientId = undefined; // Réinitialise l'ID du client lors de la déconnexion
     localStorage.removeItem("user");
+    localStorage.removeItem("user_id");
     this.router.navigate(["/login"]);
   }
 

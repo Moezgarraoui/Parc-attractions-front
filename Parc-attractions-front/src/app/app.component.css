@@ -12,8 +12,8 @@
     height: 250px;
 }
 
- .card-footer .icon-reseau {
-    height: 3%;
+.card-footer .icon-reseau {
+    height: 50px;
     width: auto;
     margin-right: 10px;
 }
