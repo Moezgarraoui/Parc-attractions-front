@@ -11,7 +11,7 @@
         <label for="password" class="form-label">Mot de passe :</label>
         <input type="password" class="form-control" formControlName="password" placeholder="Password">
         <div *ngIf="passwordCtrl.hasError('required')" class="error-message">
-          Le mot de passe est requis.
+          Le mot de passe est obligatoire.
         </div>
         <div *ngIf="passwordCtrl.hasError('minlength')" class="error-message">
           Au moins 5 caractères.
@@ -24,7 +24,7 @@
       
     
 
-    <!-- Message d'invitation à s'inscrire -->
+   
     <div class="col-12 text-center mt-3">
         <p>Vous n'êtes pas encore inscrit ?</p>
         <a routerLink="/inscription" class="btn btn-link">S'inscrire</a>

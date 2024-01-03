@@ -30,6 +30,7 @@ export class InscriptionComponent implements OnInit {
     this.utilisateurService.inscription(this.myForm.value).subscribe(
       (response) => {
         console.log('Inscription réussie:', response);
+        
         // Ajoutez ici la logique de redirection ou d'affichage de messages de succès
         this.router.navigate(['/connection']); 
       },
