@@ -11,7 +11,7 @@
 
   }
   export class Client{
-    
+    public id?: number
     public nom?: string
     public prenom?: string
    
@@ -23,6 +23,7 @@
    constructor( ) {}
  }
  export class Compte {
+  public id?: number
   public login?: string;
   public password?: string;
   public active?: boolean;
