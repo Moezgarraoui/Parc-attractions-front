@@ -99,3 +99,20 @@ button {
   button:hover {
     font-size:24px;
   }
+
+  .arrow-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  
+  .arrow {
+    font-size: 2rem; /* Ajustez la taille de l'icône selon vos besoins */
+  }
+  
+  .arrow:hover {
+    opacity: 1;
+  }
