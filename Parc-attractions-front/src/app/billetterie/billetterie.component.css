@@ -2,10 +2,6 @@ img{
     height: 60%;
 }
 
-a:hover{
-    cursor: pointer;
-}
-
 .titre-avec-trait {
     display: flex;
     align-items: center;
@@ -15,4 +11,15 @@ a:hover{
     flex: 1;
     border-bottom: 1px solid black;
     margin: 0 10px;
+}
+
+.image-container {
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+  
+.image-container:hover img {
+    transform: scale(1.1); 
+    cursor: pointer;
 }

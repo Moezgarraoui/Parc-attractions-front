@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class RestaurantsComponent {
 
+  isZoomed: boolean = false;
+
   constructor(private router: Router) {}
 
   redirect(){
