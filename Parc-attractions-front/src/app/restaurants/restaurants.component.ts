@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class RestaurantsComponent {
 
+  constructor(private router: Router) {}
+
+  redirect(){
+    this.router.navigate(['/restaurant']);
+  }
 }

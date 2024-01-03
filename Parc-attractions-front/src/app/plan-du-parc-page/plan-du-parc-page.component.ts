@@ -1,11 +1,11 @@
 
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 @Component({
   selector: 'app-plan-du-parc-page',
   templateUrl: './plan-du-parc-page.component.html',
   styleUrls: ['./plan-du-parc-page.component.css']
 })
-export class PlanDuParcPageComponent{
+export class PlanDuParcPageComponent implements OnInit{
 
 Attraction1 : boolean = false;
 Attraction2 : boolean = false;
@@ -13,7 +13,7 @@ Attraction3 : boolean = false;
 Attraction4 : boolean = false;
 Attraction5 : boolean = false;
 
-@ViewChild("scrollElement1")
+@ViewChild("scrollElement1")// Accède à l'élément scrollElement1
  scrollEl1!: ElementRef;
 @ViewChild("scrollElement2")
  scrollEl2!: ElementRef;
@@ -22,7 +22,12 @@ Attraction5 : boolean = false;
 @ViewChild("scrollElement4")
  scrollEl4!: ElementRef;
 @ViewChild("scrollElement5")
- scrollEl5!: ElementRef;   
+ scrollEl5!: ElementRef;  
+ 
+ ngOnInit() {
+  // Au moment de l'initialisation, défile vers le haut de la page
+  window.scrollTo(0, 0);
+}
 
 showAttraction1(){
   this.Attraction1=true;
