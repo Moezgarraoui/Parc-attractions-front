@@ -1,12 +1,101 @@
 #titre{
-text-align: center;
+    text-align: center;
 }
 
-#image{
-display:flex;
-justify-content:center;
+/*#image{
+    display:flex;
+    justify-content:center;
+}*/
+
+#Attraction_1{
+    background-image:url("../../assets/GrandHuit2.png");
+    background-size: contain;
+    background-position: center;
+    opacity:0.8;
 }
 
-#Attraction{
-    background-color: antiquewhite;
+#Attraction_2{
+    background-image:url("../../assets/SpaceSimulator.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
 }
+
+#Attraction_3{
+    background-image:url("../../assets/PecheCanard.png");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_4{
+    background-image:url("../../assets/smallworld2.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity:0.8;
+}
+
+#Attraction_5{
+    background-image:url("../../assets/quizz-musical.jpg");
+    background-size: contain;
+    background-position: center;
+    opacity:0.8;
+}
+
+#shadow_box{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#container-image-container{
+    display:flex;
+    justify-content:center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+.button-attraction1 {
+    position: absolute;
+    top: 33%; 
+    left: 78%; 
+    transform: translate(-50%, -50%);/* ajuste le positionnement au centre de l'image même si la taille de l'image change*/
+}
+.button-attraction2 {
+    position: absolute;
+    top: 83%; 
+    left: 23%; 
+    transform: translate(-50%, -50%); 
+}
+.button-attraction3 {
+    position: absolute;
+    top:30%; 
+    left: 13%; 
+    transform: translate(-50%, -50%);
+}
+.button-attraction4 {
+    position: absolute;
+    top:6%; 
+    left: 48%; 
+    transform: translate(-50%, -50%);
+}
+.button-attraction5 {
+    position: absolute;
+    top:45%; 
+    left: 43%; 
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size:20px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    font-size:24px;
+  }
