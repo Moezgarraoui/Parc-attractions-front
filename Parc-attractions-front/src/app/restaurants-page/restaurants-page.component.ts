@@ -20,7 +20,7 @@ export class RestaurantsPageComponent implements OnInit {
 rechercher(): Restaurant[] {
   return this.restaurants.filter((restaurant) =>
   restaurant.specialite?.toLowerCase().includes(this.recherche.toLowerCase()) ||
-  restaurant.titre?.toLowerCase().includes(this.recherche.toLowerCase())
+  restaurant.nom?.toLowerCase().includes(this.recherche.toLowerCase())
   );
   }
 

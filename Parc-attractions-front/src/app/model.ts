@@ -42,7 +42,7 @@
 }
 
 export class Restaurant{
-  constructor(public id?: number, public nom?:string, public specialite?:string){
+  constructor(public id?: number, public nom?:string, public specialite?:string, public description?:string){
 
   }
 }
