@@ -5,7 +5,7 @@
 
   }
   export class Reservation {
-    constructor(public id?: number) {
+    constructor(public id?: number, public dateReservation?:string, public dateFinReservation?:string, public hotel?:Hotel, public client?:Client) {
   
     }
 
@@ -22,7 +22,13 @@
    public compte? : Compte;
    constructor( ) {}
  }
+ export class Hotel{
+  constructor(public id?: number, public nomHotel?:string, public prixHotel?:number) {
+  
+  }
+ }
  export class Compte {
+  
   public id?: number
   public login?: string;
   public password?: string;
@@ -34,17 +40,14 @@
     this.active = active;
   }
 }
-  export class Restaurant {
-    public id?: number;
-    public titre?: string;
-    public specialite?: string;
-    public description?: string;
 
-    constructor(id: number, titre: string, specialite: string, description: string) {
-      this.id = id;
-      this.titre = titre;
-      this.specialite = specialite;
-      this.description = description;
-    }
+export class Restaurant{
+  constructor(public id?: number, public nom?:string, public specialite?:string){
 
   }
+}
+export class Repas{
+  constructor(public id?:number, public restaurant?:Restaurant, public dateRepas?:string, public heureRepas?:string, public reservation?:Reservation){
+
+  }
+}
