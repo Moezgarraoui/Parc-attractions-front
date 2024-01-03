@@ -1,5 +1,5 @@
 .card-header {
-    background-image: url("../assets/photoHeader.png");
+    background-image: url("../assets/DuckBeatParc.png");
 
     background-repeat: no-repeat;
 
@@ -7,9 +7,9 @@
 
     background-position-y: bottom;
 
-    background-size: 100%;
+    background-size: 80%;
 
-    height: 180px;
+    height: 250px;
 }
 
  .card-footer .icon-reseau {

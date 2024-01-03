@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { Restaurant } from '../model';
 import { Component, OnInit } from '@angular/core';
 
