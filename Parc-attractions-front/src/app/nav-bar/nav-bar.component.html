@@ -25,8 +25,7 @@
     </li>
   </ul>-->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container mx-auto">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -55,5 +54,37 @@
         </li>
       </ul>
     </div>
-    </div>
+  </nav> -->
+
+  <nav>
+      <ul>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['accueil']" routerLinkActive="active">Accueil</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['plan-du-parc']" routerLinkActive="active">Plan du parc</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['hotel']" routerLinkActive="active">Hôtel</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['reservation']" routerLinkActive="active">Réservation</a>
+        </li>
+        <li class="nav-item" >
+            <a class="nav-link" [routerLink]="['restaurant']" routerLinkActive="active">Restaurant</a>
+        </li>
+          <li class="nav-item" *ngIf="!isLogged()">
+            <a class="nav-link" [routerLink]="['connection']" routerLinkActive="active">Connexion</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged()">
+          <a class="nav-link" [routerLink]="['inscription']" routerLinkActive="active">Inscription</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged()">
+            <a class="nav-link" (click)="logout()">Déconnexion</a>
+        </li>
+      </ul>
   </nav>
+
+  <br>
+
+  
