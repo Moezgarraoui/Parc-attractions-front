@@ -16,6 +16,8 @@ export class RestaurantsPageComponent implements OnInit {
     this.restaurants.push(new Restaurant(2, "Symphonie gourmande", "Français","Escargots en Serenade"));
     this.restaurants.push(new Restaurant(3, "Hard Rock hideaway", "Américaine","AC/DC Angus Burger"));
   }
+  
+  result = this.restaurants;
 
 rechercher(): Restaurant[] {
   return this.restaurants.filter((restaurant) =>

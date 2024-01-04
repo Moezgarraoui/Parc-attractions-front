@@ -1,22 +1,14 @@
-<br>
-<div class="titre-avec-trait">
-  <div class="trait"></div>
-  <h3> Restaurants</h3>
-  <div class="trait"></div>
-</div>
-<br>
-
 <form class="form-inline" style="display: flex;">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="recherche" [ngModelOptions]="{ standalone: true }">
-  <button class="btn btn-primary" type="submit">Search</button>
+  <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" [(ngModel)]="recherche" [ngModelOptions]="{ standalone: true }">
+  <button class="btn btn-light" type="submit" (click)="result = rechercher()">Rechercher</button>
 </form>
 
 <div class="container mt-4">
 
-  <div *ngFor="let restaurant of rechercher()" class="row">
+  <div *ngFor="let restaurant of result" class="row">
     <div class="col-md-6 mb-4">
       <img
-        src="/assets/restaurantCine.png"
+        src="/assets/{{restaurant.nom}}.png"
         class="d-block w-100"
         alt="Image du restaurant Ciné-gastronomie"
       />
@@ -28,9 +20,11 @@
           <h2 class="card-subtitle mb-2 text-muted">Type de cuisine</h2>
           <p class="card-text">{{restaurant.specialite}}</p>
           <h2 class="card-subtitle mb-2 text-muted">Plats</h2>
-          <ul>
+          <ul *ngIf="restaurant.nom == 'Ciné-gastronomie'">
             <li>
-              {{restaurant.description}}
+              Amélie's Delight - Velouté de champignons sauvages accompagné de
+              croûtons à l'ail, inspiré par le film "Le Fabuleux Destin d'Amélie
+              Poulain".
             </li>
             <li>
               Ratatouille Rhapsody - Ratatouille provençale, soigneusement
@@ -42,14 +36,43 @@
               pois chiches, dans la pure tradition marocaine inspirée par le
               film classique "Casablanca".
             </li>
-            
+          </ul>
+          <ul *ngIf="restaurant.nom == 'Symphonie gourmande'">
+            <li>
+              Escargots en Serenade - Escargots de Bourgogne dans une persillade
+              à l'ail, servis dans leurs coquilles, une symphonie de saveurs
+              traditionnelles.
+            </li>
+            <li>
+              Filet Mignon Duet - Filet mignon grillé, accompagné d'une sauce au
+              vin rouge et de pommes de terre dauphinoises. Une composition
+              classique pour les amateurs de viande.
+            </li>
+            <li>
+              Poissé Sonata - Filet de bar croustillant sur un lit de
+              ratatouille provençale, une mélodie de saveurs méditerranéennes.
+            </li>
+          </ul>
+          <ul *ngIf="restaurant.nom == 'Hard Rock hideaway'">
+            <li>
+              AC/DC Angus Burger - Un hommage à l'incontournable groupe de rock,
+              ce burger charnu est garni de bacon fumé, de cheddar fort et de
+              notre sauce secrète "Thunderstruck". Accompagné de frites
+              croustillantes et d'une pincée de rock 'n' roll.
+            </li>
+            <li>
+              Guns N' Roses Grilled Steak - Une pièce de viande noble marinée
+              dans une sauce à l'ail et aux herbes, puis grillée à la
+              perfection. Servie avec des pommes de terre rôties au romarin et
+              une salade fraîche. Un festin digne des légendes du hard rock.
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
- 
+<!-- 
   <div class="row">
     <div class="col-md-6 mb-4">
       <img
@@ -210,6 +233,7 @@
     <p>Total TTC : €</p>
     <button type="submit" class="btn btn-success">Valider reservation</button>
   </div>
+-->
 </div>
 
   
