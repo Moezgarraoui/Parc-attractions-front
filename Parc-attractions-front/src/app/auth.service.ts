@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Compte } from './model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private apiUrl = 'http://localhost:8080/connexion';
@@ -15,18 +15,19 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(login: string, password: string) {
-    this.http.post<Compte>(this.apiUrl, { "login": login, "password": password })
+    this.http
+      .post<Compte>(this.apiUrl, { login: login, password: password })
       .subscribe(
-        resp => {
+        (resp) => {
           this.client = resp;
           this.currentClientId = resp.id; // Enregistre l'ID du client
-          localStorage.setItem("user", JSON.stringify(this.client));
-          localStorage.setItem("user_id",JSON.stringify(this.currentClientId));
-          this.router.navigate(["/accueil"]);
+          localStorage.setItem('user', JSON.stringify(this.client));
+          localStorage.setItem('user_id', JSON.stringify(this.currentClientId));
+          this.router.navigate(['/accueil']);
         },
-        error => {
-          console.error("Vérifiez votre mot de passe et identifiant.", error);
-          alert("Vérifiez votre mot de passe et identifiant.");
+        (error) => {
+          console.error('Vérifiez votre mot de passe et identifiant.', error);
+          alert('Vérifiez votre mot de passe et identifiant.');
         }
       );
   }
@@ -34,9 +35,9 @@ export class AuthService {
   logout() {
     this.client = undefined;
     this.currentClientId = undefined; // Réinitialise l'ID du client lors de la déconnexion
-    localStorage.removeItem("user");
-    localStorage.removeItem("user_id");
-    this.router.navigate(["/connexion"]);
+    localStorage.removeItem('user');
+    localStorage.removeItem('user_id');
+    this.router.navigate(['/connection']);
   }
 
   isLogged(): boolean {
@@ -48,7 +49,7 @@ export class AuthService {
     if (this.client) {
       return this.client;
     } else {
-      const user = localStorage.getItem("user");
+      const user = localStorage.getItem('user');
       if (user) {
         this.client = JSON.parse(user);
         return this.client;
