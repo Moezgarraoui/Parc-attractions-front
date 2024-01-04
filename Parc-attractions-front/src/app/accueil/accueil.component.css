@@ -1,21 +1,20 @@
-#photoAccueil2 {
-    /*background-image:url("../../assets/GrandeRoue.jpg");*/
+/* #photoAccueil2 {
+    /*background-image:url("../../assets/GrandeRoue.jpg");
     background-image:url("../../assets/DuckBeatParc2.png");
     background-size: cover;
     background-position: center center;
     opacity:0.8;
-    /*height: 400px;*/
+    /*height: 400px;
     height:200px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-}
+}*/
 
 #photoAccueil {
   background-image:url("../../assets/GrandeRoue.jpg");
   background-size: cover;
   background-position: center center;
-  opacity:0.8;
   height: 400px;
   display:flex;
   flex-direction:column;
@@ -50,3 +49,10 @@
 .arrow:hover {
     opacity: 1;
   }
+
+.card-footer .icon-reseau {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+

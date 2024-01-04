@@ -93,3 +93,9 @@ u:hover{
 .description p{
   padding:10px;
 } 
+
+.card-footer .icon-reseau {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}

@@ -17,3 +17,15 @@
 .center-button button {
     width: 100%; /* Bouton prend toute la largeur disponible */
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  button {
+    margin-left: 5px;
+    background-color:rgb(93, 88, 88);
+    color: white;
+  }
