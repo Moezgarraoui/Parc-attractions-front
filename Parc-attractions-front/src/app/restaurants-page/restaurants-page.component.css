@@ -42,9 +42,42 @@ u:hover{
 
 }
 
-.Presentationcontainer{
+.Presentationcontainer1{
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/restaurantCine.png");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  color:white
+}
+
+.Presentationcontainer2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/restaurantSymphonie.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  color:white
+}
+
+.Presentationcontainer3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/restaurantRock.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  color:white
+}
+
+.surbrillance{
+  background-color: black; 
+  display: inline;
 }
 
 .centrer {
