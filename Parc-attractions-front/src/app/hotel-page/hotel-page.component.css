@@ -9,3 +9,46 @@
     border-bottom: 1px solid black;
     margin: 0 10px;
 }
+
+.description{
+  font-size: 16px;
+  text-align: justify;
+}
+
+i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+#Materiel ul {
+  list-style-type:none;
+}
+
+#Materiel, #Options{
+  margin-right:45px
+}
+
+#Options li {
+  margin-top:10px;
+}
+
+.text-container{
+  display:flex;
+}
+
+.carousel-item img{
+  height:350px;
+}
+
+#Chambre{
+  cursor:pointer;
+}
+
+u:hover{
+  font-size:20px;
+}
+
+.arrow-lien{
+  font-size: 20px;
+  margin-left:20px;
+}
