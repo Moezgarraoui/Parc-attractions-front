@@ -2,10 +2,16 @@
     text-align: center;
 }
 
-/*#image{
-    display:flex;
-    justify-content:center;
-}*/
+.titre-avec-trait {
+    display: flex;
+    align-items: center;
+  }
+
+.trait {
+    flex: 1;
+    border-bottom: 1px solid black;
+    margin: 0 10px;
+}
 
 #Attraction_1{
     background-image:url("../../assets/GrandHuit2.png");
