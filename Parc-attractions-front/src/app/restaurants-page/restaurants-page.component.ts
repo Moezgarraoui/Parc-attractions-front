@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Restaurant } from '../model';
 import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from '../restaurants/restaurant.service';
 
 @Component({
   selector: 'app-restaurants-page',
@@ -8,20 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurants-page.component.css']
 })
 export class RestaurantsPageComponent implements OnInit {
-
-  restaurants: Restaurant[] = new Array<Restaurant>();
+  restaurantsArray: Restaurant[]=[];
+  result: Restaurant[] = [];
   recherche: string = "";
 
-  constructor(private router?: Router) {
-    this.restaurants.push(new Restaurant(1, "Ciné-gastronomie", "Cuisine du monde","Amélie's Delight"));
-    this.restaurants.push(new Restaurant(2, "Symphonie gourmande", "Français","Escargots en Serenade"));
-    this.restaurants.push(new Restaurant(3, "Hard Rock hideaway", "Américaine","AC/DC Angus Burger"));
+  constructor(private router: Router, private restaurantService: RestaurantService) {
   }
-  
-  result = this.restaurants;
 
 rechercher(): Restaurant[] {
-  return this.restaurants.filter((restaurant) =>
+  return this.restaurantsArray.filter((restaurant) =>
   restaurant.specialite?.toLowerCase().includes(this.recherche.toLowerCase()) ||
   restaurant.nom?.toLowerCase().includes(this.recherche.toLowerCase())
   );
@@ -29,6 +25,7 @@ rechercher(): Restaurant[] {
 
   ngOnInit() {
     window.scrollTo(0, 0);
+    this.loadHotel();
   }
 
   scrollToTop() {
@@ -37,8 +34,13 @@ rechercher(): Restaurant[] {
 
   redirect(){
     if(this.router){
-    this.router.navigate(['/reservation_billets']);
+      this.router.navigate(['/reservation_billets']);
+    }
   }
+    
+  loadHotel() {
+    this.restaurantService.findAll().subscribe(resp=>{this.restaurantsArray=resp});
+    this.restaurantService.findAll().subscribe(resp=>{this.result=resp});
   }
   
 }
