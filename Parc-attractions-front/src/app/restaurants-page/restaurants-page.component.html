@@ -19,19 +19,36 @@
 <div class="container mt-4">
   <div *ngFor="let restaurant of result" class="row">
   <div class="card" style="margin-bottom:50px;">
-  <div class="Presentationcontainer">
+
+  <div class="Presentationcontainer1" *ngIf="restaurant.nom == 'Ciné-gastronomie'">
     <div class="col-md-6 centrer">
       <h3 class="card-title">{{restaurant.nom}}</h3>
       <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
-      <p class="description" *ngIf="restaurant.nom == 'Ciné-gastronomie'">
+      <p class="description">
         Au Ciné-gastronomie, les repas sont inspirés par des films célèbres. Vous pourrez déguster des plats tout en
         écoutant des extraits des bandes sonores correspondantes.
       </p>
-      <p class="description" *ngIf="restaurant.nom == 'Symphonie gourmande'">
+      <br>
+    </div>
+  </div>
+  
+  <div class="Presentationcontainer2" *ngIf="restaurant.nom == 'Symphonie gourmande'">
+    <div class="col-md-6 centrer">
+      <h3 class="card-title">{{restaurant.nom}}</h3>
+      <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
+      <p class="description">
         Un restaurant raffiné offrant une expérience gastronomique unique avec une ambiance classique. 
         Les plats sont présentés en harmonie avec des performances de musique classique en direct.
       </p>
-      <p class="description" *ngIf="restaurant.nom == 'Hard Rock hideaway'">
+      <br>
+    </div>
+  </div>
+
+  <div class="Presentationcontainer3" *ngIf="restaurant.nom == 'Hard Rock hideaway'">
+    <div class="col-md-6 centrer">
+      <h3 class="card-title">{{restaurant.nom}}</h3>
+      <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
+      <p class="description">
         Dans les profondeurs du monde du rock, découvrez le "Hard Rock Hideaway", un restaurant où les
          saveurs puissantes de la cuisine rencontrent l'énergie débordante du rock. Notre menu "Hard and Hearty"
           célèbre les légendes du genre avec des plats robustes et des breuvages énergisants, le tout dans une 
@@ -39,8 +56,9 @@
       </p>
       <br>
     </div>
-  </div>  
-
+  </div>
+  
+  <br>
   <div class="col-md-12">
    <div class="Menu" *ngIf="restaurant.nom == 'Ciné-gastronomie'">
     <div class="repas">
