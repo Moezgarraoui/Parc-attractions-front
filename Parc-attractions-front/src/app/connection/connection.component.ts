@@ -48,7 +48,7 @@ export class ConnectionComponent {
         this.authService.setAdmin(true);
     
         // Redirigez ensuite l'utilisateur vers la page réservée aux administrateurs
-        this.router.navigate(["/reservation"]);
+        this.router.navigate(["/jordan"]);
       },
       error => {
         console.error("Erreur d'authentification en tant qu'administrateur", error);

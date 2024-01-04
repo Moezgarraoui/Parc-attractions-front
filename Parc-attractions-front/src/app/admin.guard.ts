@@ -14,7 +14,7 @@ export class AdminGuard implements CanActivate {
         if (this.authService.isAdminUser()) {
             return true; // Autorisé à accéder à la route
         } else {
-            this.router.navigate(['/reservation']); // Redirige vers la page d'accueil (ou une autre page)
+            this.router.navigate(['/jordan']); // Redirige vers la page d'accueil (ou une autre page)
             return false;
         }
     }

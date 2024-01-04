@@ -19,6 +19,7 @@ import { ReservationBilletsComponent } from './reservation-billets/reservation-b
 import { ReservationComponent } from './reservation/reservation.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { JordanComponent } from './jordan/jordan.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     PlanDuParcPageComponent,
     InscriptionComponent,
     ConnectionComponent,
+    JordanComponent,
     
   ],
   imports: [

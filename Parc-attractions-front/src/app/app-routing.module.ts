@@ -7,11 +7,14 @@ import { ReservationComponent } from './reservation/reservation.component';
 
 import { ConnectionComponent } from './connection/connection.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { JordanComponent } from './jordan/jordan.component';
 import { PlanDuParcPageComponent } from './plan-du-parc-page/plan-du-parc-page.component';
 import { ReservationBilletsComponent } from './reservation-billets/reservation-billets.component';
 import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 
 const routes: Routes = [
+  { path: "jordan", component: JordanComponent},
+
     { path: "plan-du-parc", component: PlanDuParcPageComponent },
 
   { path: "plan-du-parc", component: PlanDuParcPageComponent },
