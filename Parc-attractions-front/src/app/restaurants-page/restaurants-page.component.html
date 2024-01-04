@@ -1,8 +1,204 @@
+<br>
+<div class="titre-avec-trait">
+  <div class="trait"></div>
+  <h3> Restaurants</h3>
+  <div class="trait"></div>
+</div>
+<br>
+
 <form class="form-inline" style="display: flex;">
   <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" [(ngModel)]="recherche" [ngModelOptions]="{ standalone: true }">
   <button class="btn btn-light" type="submit" (click)="result = rechercher()">Rechercher</button>
 </form>
 
+<div class="arrow-container" (click)="scrollToTop()">
+  <i class="bi bi-arrow-up-circle arrow"></i>
+</div>
+
+
+<div class="container mt-4">
+  <div *ngFor="let restaurant of result" class="row">
+  <div class="card" style="margin-bottom:50px;">
+
+  <div class="Presentationcontainer1" *ngIf="restaurant.nom == 'Ciné-gastronomie'">
+    <div class="col-md-6 centrer">
+      <h3 class="card-title">{{restaurant.nom}}</h3>
+      <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
+      <p class="description">
+        Au Ciné-gastronomie, les repas sont inspirés par des films célèbres. Vous pourrez déguster des plats tout en
+        écoutant des extraits des bandes sonores correspondantes.
+      </p>
+      <br>
+    </div>
+  </div>
+  
+  <div class="Presentationcontainer2" *ngIf="restaurant.nom == 'Symphonie gourmande'">
+    <div class="col-md-6 centrer">
+      <h3 class="card-title">{{restaurant.nom}}</h3>
+      <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
+      <p class="description">
+        Un restaurant raffiné offrant une expérience gastronomique unique avec une ambiance classique. 
+        Les plats sont présentés en harmonie avec des performances de musique classique en direct.
+      </p>
+      <br>
+    </div>
+  </div>
+
+  <div class="Presentationcontainer3" *ngIf="restaurant.nom == 'Hard Rock hideaway'">
+    <div class="col-md-6 centrer">
+      <h3 class="card-title">{{restaurant.nom}}</h3>
+      <h5>Type de cuisine : <u>{{restaurant.specialite}}</u></h5>
+      <p class="description">
+        Dans les profondeurs du monde du rock, découvrez le "Hard Rock Hideaway", un restaurant où les
+         saveurs puissantes de la cuisine rencontrent l'énergie débordante du rock. Notre menu "Hard and Hearty"
+          célèbre les légendes du genre avec des plats robustes et des breuvages énergisants, le tout dans une 
+          atmosphère électrique.
+      </p>
+      <br>
+    </div>
+  </div>
+  
+  <br>
+  <div class="col-md-12">
+   <div class="Menu" *ngIf="restaurant.nom == 'Ciné-gastronomie'">
+    <div class="repas">
+      <img src="/assets/VeloutéChampi.png" width="200px" height="180px">
+      <p><b>Amélie's Delight</b>
+    </div>
+    <div class="description">
+      <p>Velouté de champignons sauvages accompagné de croûtons à l'ail, inspiré par le film 
+        "Le Fabuleux Destin d'Amélie Poulain".</p>
+    </div>
+    <div class="repas">
+      <p><b>Ratatouille Rhapsody</b>
+      <img src="/assets/RatatouilleProvencale.png" width="200px" height="180px"></div>
+    <div class="description" style="align-self: flex-end;" >
+      <p>Ratatouille provençale, soigneusement préparée avec des légumes frais et des herbes, 
+        inspirée par le film d'animation "Ratatouille".</p>
+    </div>
+    <div class="repas">
+      <img src="/assets/Couscous.png" width="200px" height="180px">
+      <p><b>Couscous Casablanca</b></div>
+    <div class="description">
+      <p>Couscous aux sept légumes, agneau braisé et pois chiches, dans la pure tradition marocaine 
+        inspirée par le film classique "Casablanca".</p>
+    </div>
+   </div>
+
+   <div class="Menu" *ngIf="restaurant.nom == 'Symphonie gourmande'">
+    <div class="repas">
+      <img src="/assets/Symphonie gourmande 1.png" width="200px" height="180px">
+      <p><b>Escargots en Serenade</b>
+    </div>
+    <div class="description">
+      <p>Escargots de Bourgogne dans une persillade à l'ail, servis dans leurs coquilles, 
+        une symphonie de saveurs traditionnelles.</p>
+    </div>
+    <div class="repas">
+      <p><b>Filet Mignon Duet</b>
+      <img src="/assets/Symphonie gourmande 2.png" width="200px" height="180px"></div>
+    <div class="description" style="align-self: flex-end;" >
+      <p>Filet mignon grillé, accompagné d'une sauce au vin rouge et de pommes de terre dauphinoises. 
+        Une composition classique pour les amateurs de viande.</p>
+    </div>
+    <div class="repas">
+      <img src="/assets/Symphonie gourmande 3.png" width="200px" height="180px">
+      <p><b>Poisson Sonata</b></div>
+    <div class="description">
+      <p>Filet de bar croustillant sur un lit de ratatouille provençale, une mélodie de saveurs méditerranéennes</p>
+    </div>
+   </div>
+
+   <div class="Menu" *ngIf="restaurant.nom == 'Hard Rock hideaway'">
+    <div class="repas">
+      <img src="/assets/Hard Rock hideaway1.png" width="200px" height="180px">
+      <p><b>AC/DC Angus Burger </b>
+    </div>
+    <div class="description">
+      <p>Un hommage à l'incontournable groupe de rock, ce burger charnu est garni de bacon fumé, de cheddar fort 
+        et de notre sauce secrète "Thunderstruck". Accompagné de frites croustillantes et d'une pincée de rock 'n' roll.</p>
+    </div>
+    <div class="repas">
+      <p><b>Guns N' Roses Grilled Steak</b>
+      <img src="/assets/Hard Rock hideaway2.png" width="200px" height="180px"></div>
+    <div class="description" style="align-self: flex-end;" >
+      <p>Une pièce de viande noble marinée dans une sauce à l'ail et aux herbes, puis grillée à la perfection. 
+        Servie avec des pommes de terre rôties au romarin et une salade fraîche. Un festin digne des légendes du hard rock.</p>
+    </div>
+   </div>
+
+  <br>
+   <div class="centrer">
+        <p (click)="redirect()" style="font-size: 20px;">
+          <i class="bi bi-arrow-return-right arrow-lien"></i> 
+          <u>Réserver ici</u></p>
+   </div>
+  </div> 
+  </div>
+</div>
+</div>
+
+
+<!--
+
+<div class="container mt-4">
+  <div class="Presentationcontainer">
+    <div class="col-md-6 PresentationRestau">
+      <h3 class="card-title">Ciné-gastronomie</h3>
+      <h5>Type de cuisine : <u>Cuisine du monde</u></h5>
+      <p class="description">
+        Au Ciné-gastronomie, les repas sont inspirés par des films célèbres. Vous pourrez déguster des plats tout en
+        écoutant des extraits des bandes sonores correspondantes.
+      </p>
+      <br>
+    </div>
+  </div>  
+
+  <div class="col-md-12">
+   <div class="Menu">
+    <div class="repas">
+      <img src="/assets/VeloutéChampi.png" width="200px" height="180px">
+      <p><b>Amélie's Delight</b></div>
+    <div class="description">
+      <p>Velouté de champignons sauvages accompagné de croûtons à l'ail, inspiré par le film 
+        "Le Fabuleux Destin d'Amélie Poulain".</p>
+    </div>
+    <div class="repas">
+      <p><b>Ratatouille Rhapsody</b>
+      <img src="/assets/RatatouilleProvencale.png" width="200px" height="180px"></div>
+    <div class="description" style="align-self: flex-end;" >
+      <p>Ratatouille provençale, soigneusement préparée avec des légumes frais et des herbes, 
+        inspirée par le film d'animation "Ratatouille".</p>
+    </div>
+    <div class="repas">
+      <img src="/assets/Couscous.png" width="200px" height="180px">
+      <p><b>Couscous Casablanca</b></div>
+    <div class="description">
+      <p>Couscous aux sept légumes, agneau braisé et pois chiches, dans la pure tradition marocaine 
+        inspirée par le film classique "Casablanca".</p>
+    </div>
+
+   </div>
+
+   <div>
+        <p (click)="redirect()">
+          <i class="bi bi-arrow-return-right arrow-lien"></i> 
+          <u>Réserver ici</u></p>
+   </div>
+  </div> 
+</div>
+-->
+
+<!--<div class="col-md-2" style="overflow: hidden;">
+    <img src="/assets/restaurantCine.png" width="600px" height="300px">
+  </div>-->
+
+
+
+
+
+
+<!--
 <div class="container mt-4">
 
   <div *ngFor="let restaurant of result" class="row">
@@ -71,7 +267,7 @@
       </div>
     </div>
   </div>
-
+-->
 <!-- 
   <div class="row">
     <div class="col-md-6 mb-4">
@@ -234,7 +430,6 @@
     <button type="submit" class="btn btn-success">Valider reservation</button>
   </div>
 -->
-</div>
 
   
   
