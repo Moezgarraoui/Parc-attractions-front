@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Restaurant } from '../model';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,7 +12,7 @@ export class RestaurantsPageComponent implements OnInit {
   restaurants: Restaurant[] = new Array<Restaurant>();
   recherche: string = "";
 
-  constructor() {
+  constructor(private router?: Router) {
     this.restaurants.push(new Restaurant(1, "Ciné-gastronomie", "Cuisine du monde","Amélie's Delight"));
     this.restaurants.push(new Restaurant(2, "Symphonie gourmande", "Français","Escargots en Serenade"));
     this.restaurants.push(new Restaurant(3, "Hard Rock hideaway", "Américaine","AC/DC Angus Burger"));
@@ -27,7 +28,17 @@ rechercher(): Restaurant[] {
   }
 
   ngOnInit() {
-    // Au moment de l'initialisation, défile vers le haut de la page
     window.scrollTo(0, 0);
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  redirect(){
+    if(this.router){
+    this.router.navigate(['/reservation_billets']);
+  }
+  }
+  
 }
