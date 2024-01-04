@@ -20,8 +20,8 @@
   
       <div class="form-group text-center">
         
-        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i> Connexion</button>
-        <button (click)="loginAsAdmin()" class="btn btn-success btn-lg"> Se connecter en tant qu'admin</button>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-light"> Connexion</button><br>
+        <button (click)="loginAsAdmin()" class="btn btn-light"> Se connecter en tant qu'admin</button>
 
       </div>
       
@@ -30,8 +30,10 @@
    
     <div class="col-12 text-center mt-3">
         <p>Vous n'êtes pas encore inscrit ?</p>
-        <a routerLink="/inscription" class="btn btn-link">S'inscrire</a>
-
+        <div style="display:flex; justify-content:center;">
+          <i class="bi bi-arrow-return-right" style="font-size: 25px;"></i>
+          <a routerLink="/inscription" class="btn btn-link">S'inscrire</a>
+      </div>
     </div>
     </form>
   </div>

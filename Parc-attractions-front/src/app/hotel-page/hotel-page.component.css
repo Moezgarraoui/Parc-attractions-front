@@ -75,3 +75,9 @@ u:hover{
   background-color:rgb(93, 88, 88);
   color: white;
 }
+
+.card-footer .icon-reseau {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}

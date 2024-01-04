@@ -122,3 +122,9 @@ button {
   .arrow:hover {
     opacity: 1;
   }
+
+  .card-footer .icon-reseau {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+  }
