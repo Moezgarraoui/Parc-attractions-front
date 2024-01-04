@@ -1,32 +1,132 @@
-<p>AJOUT </p>
-<form (ngSubmit)="saveNbVisiteurs()" [formGroup]="nbVisForm">
-    <div class="card-header text-white bg-primary">
-       Ajout d'une réservation
+<br>
+<div class="titre-avec-trait">
+    <div class="trait"></div>
+    <h3>Réservation</h3>
+    <div class="trait"></div>
+  </div>
+  <br>
+
+<p style="text-align:center"> Le DuckBeat parc  est un parc d'attractions unique en son genre, entièrement dédié à l'univers magique de la musique.
+    Dès que vous franchissez les portes de ce parc, vous êtes transporté dans un monde où chaque note résonne avec une énergie particulière.
+    DuckBeat parc offre une expérience inoubliable où la musique devient une partie intégrante de chaque attraction, restaurant et coin du parc.
+    Que vous soyez un passionné de rock, un amateur de musique classique ou un fan de bandes sonores de films,
+    ce parc d'attractions musical vous promet une journée pleine de découvertes sensorielles et d'émotions musicales !
+</p>
+<div class="text-center">
+<button  class="btn btn-secondary" (click)="addReservation()" *ngIf="showBeginning==true"> Réservez vos billets pour notre merveilleux parc </button>
+</div>
+
+<div class="card mt-3">
+<form [formGroup]="visiteursForm2" *ngIf="showForm==true" class="login-form">
+    <div class="form-group">
+        <h2 class="form-title">Votre réservation</h2>
+    <label for="date_debut" class="form-label"> Quel est la date du début de votre visite ? </label>
+    <input type="date" id="date_debut" formControlName="dateReservation" class="form-control"> 
     </div>
-    <div class="card-body"> 
-        <div class="mb-3 mt-3">
-            <!--<label for="id" class="form-label">Identifiant:</label>-->
-            <input type="number" class="form-control" id="id_res" name="id_res" hidden formControlName="id_res">
-        </div>
-        <div class="mb-3">
-            <label for="nbVisiteurs" class="form-label">Veuillez renseigner le nombre de visiteurs de la réservation :</label>
-            <input type="number" class="form-control" id="nbVisiteurs" name="nbVisiteurs" formControlName="nbVisiteurs">
+    <div class="form-group">
+    <label for="date_fin" class="form-label"> Quel est la date de la fin de votre visite ? </label>
+    <input type="date" id="date_fin" formControlName="dateFinReservation" class="form-control"> 
+    </div>
+    <ng-container formArrayName="visiteurs2" class="form-group">
+        <ng-container  *ngFor="let visForm2 of visiteurs2.controls; let i=index">
+            <h5 class="form-title">Visiteur n°{{i+1}}</h5>
+            <div class="new_Visiteur" [formGroupName]="i">
+                <label for="id" class="form-label" hidden>Identifiant:</label>
+                <input type="number" class="form-control" id="id" name="id" hidden formControlName="id">
+            
+                <label for="nom" class="form-label">Nom:</label>
+                <input type="text" class="form-control" id="nom" name="nom" formControlName="nom">
+            
+                <label for="prenom" class="form-label">Prénom:</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" formControlName="prenom">
+           
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" formControlName="age">
+          
+                <label for="taille" class="form-label">Taille:</label>
+                <input type="number" class="form-control" id="taille" name="taille" formControlName="taille">
+               <!-- <label for="reservation" class="form-label"  >Reservation :</label>
+                <input type="number" class="form-control" id="id_res" name="reservation"  formControlName="reservation">-->
+            </div>
+            <br>
+        </ng-container>
+        <div class="text-center">
+        <button class="btn btn-secondary" (click)="addVisiteur2()"> Ajouter un visiteur </button>
         </div>
         
-    </div>
-    <div class="card-footer">
-        <button type="submit" [disabled]="nbVisForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i></button>
-        <a (click)="cancel()" class="btn btn-warning btn-lg mx-2"><i class="bi bi-backspace"></i></a>
-    </div>
-</form>
-
-<div [formGroup]="visiteursForm2">
-    <ng-container formArrayName="visiteurs2">
-        <ng-container *ngFor="let visForm2 of visiteurs2.controls; let i=index">
-            
-        </ng-container>
     </ng-container>
+
+    
+    <div class="form-group">
+        <div class="text-center">
+            <button class="btn btn-secondary" (click)="ouvrirResHotel()" *ngIf="visiteurs2.length > 0" > Réserver un hôtel pour votre séjour ? </button>
+            </div>
+    <ng-container *ngIf="showResHotel==true" >
+        <h5 class="form-title">Votre hôtel : </h5>
+        <!--<label for="hotel" class="form-label">Votre hôtel : </label>-->
+        <select type="number" formControlName="hotel" class="form-select">
+                <option *ngFor="let h of hotelsArray" [value]="h.id"> {{h.nomHotel}} </option>
+            </select>
+        
+    </ng-container>
+    </div>
+    <!--<button type="button" (click)="ouvrirResRepas()"> Réserver un repas pour votre séjour ? </button>-->
+    <div class="form-group">
+    <ng-container formArrayName="repasList"  *ngIf="visiteurs2.length > 0">
+        <ng-container *ngFor="let repasForm of repasList.controls; let i=index">
+            <h5 class="form-title">Repas n°{{i+1}}</h5>
+            <div class="new_Repas" [formGroupName]="i">
+                
+                <label for="id" class="form-label" hidden>Identifiant:</label>
+                <input type="number" class="form-control" id="id" name="id" hidden formControlName="id">
+            
+                <label for="restaurant" class="form-label">Restaurant :</label>
+                <select type="number" formControlName="restaurant" class="form-select">
+                    <option *ngFor="let r of restauArray" [value]="r.id"> {{r.nom}} ({{r.specialite}}) </option>
+                </select>
+                <label for="dateRepas" class="form-label">Date Repas:</label>
+                <input type="date" class="form-control" id="dateRepas" name="dateRepas" formControlName="dateRepas">
+           
+                <label for="heureRepas" class="form-label">Heure Repas :</label>
+                <input type="time"  class="form-control" id="heureRepas" name="heureRepas" formControlName="heureRepas">
+          
+                <!--<label for="taille" class="form-label">Taille:</label>
+                <input type="number" class="form-control" id="taille" name="taille" formControlName="taille">
+                <label for="reservation" class="form-label"  >Reservation :</label>
+                <input type="number" class="form-control" id="id_res" name="reservation"  formControlName="reservation">-->
+       </div>
+       <br>
+        </ng-container>
+        <div class="text-center">
+        <button class="btn btn-secondary" (click)="addRepas()" *ngIf="firstRepas==false"> Ajouter un repas à votre réservation ?</button>
+        <!--<button type="button" (click)="addRepas()" *ngIf="firstRepas==true"> Ajouter un autre repas </button>-->
+    </div>
+    </ng-container>
+    
 </div>
+    
+    <div *ngIf="visiteurs2.length > 0" class="col text-center">
+        <button type="button" class="btn btn-success" (click)="saveArray()" > Valider la réservation </button>
+    </div>
+
+   
+</form>
+</div>
+
+
+<!--
+<div *ngIf="showRecap==true">
+    <hr>
+    <p style="text-align:center"> Récapitulatif </p>
+    <hr>
+    <p>{{visiteursForm2.controls["hotel"].getRawValue()}}</p>   
+    <p>Hôtels : {{calculateDiff(visiteursForm2.value.dateFinReservation,visiteursForm2.value.dateReservation)}} nuits x {{prixHotel(this.visiteursForm2.getRawValue().hotel)}}</p>    
+</div> -->
+
+
+
+
+    
 <!--<form (ngSubmit)="onSubmit()" [formGroup]="visiteursForm">
 <div formArrayName="visiteurs">
     <div *ngFor="let vis of visiteursControlsArray; let i=index">
