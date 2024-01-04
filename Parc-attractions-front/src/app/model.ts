@@ -20,7 +20,7 @@
    public ville? : string;
    public cp ?:string
    public compte? : Compte;
-   constructor( ) {}
+  
  }
  export class Hotel{
   constructor(public id?: number, public nomHotel?:string, public prixHotel?:number) {
@@ -32,12 +32,12 @@
   public id?: number
   public login?: string;
   public password?: string;
-  public active?: boolean;
+  public admin?: boolean;
 
-  constructor(login: string, password: string, active: boolean) {
+  constructor(login: string, password: string, admin: boolean) {
     this.login = login;
     this.password = password;
-    this.active = active;
+    this.admin = admin;
   }
 }
 
