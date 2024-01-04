@@ -36,7 +36,7 @@ export class AuthService {
     this.currentClientId = undefined; // Réinitialise l'ID du client lors de la déconnexion
     localStorage.removeItem("user");
     localStorage.removeItem("user_id");
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/connexion"]);
   }
 
   isLogged(): boolean {
