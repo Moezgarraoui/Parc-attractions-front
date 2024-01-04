@@ -38,8 +38,26 @@ export class ConnectionComponent {
  
   onSubmit(){
     this.authService.login(this.loginCtrl.value,this.passwordCtrl.value)
+  
+    
   }
-}
+  loginAsAdmin(): void {
+    this.authService.loginAsAdmin().subscribe(
+      resp => {
+        // Si l'authentification réussit, appelez setAdmin(true)
+        this.authService.setAdmin(true);
+    
+        // Redirigez ensuite l'utilisateur vers la page réservée aux administrateurs
+        this.router.navigate(["/reservation"]);
+      },
+      error => {
+        console.error("Erreur d'authentification en tant qu'administrateur", error);
+        alert("Erreur d'authentification en tant qu'administrateur");
+      }
+    );
+  }
+  }
+
 
 
 

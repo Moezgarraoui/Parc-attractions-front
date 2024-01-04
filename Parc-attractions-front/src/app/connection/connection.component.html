@@ -19,7 +19,10 @@
       </div>
   
       <div class="form-group text-center">
+        
         <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-lg"><i class="bi bi-check-lg"></i> Connexion</button>
+        <button (click)="loginAsAdmin()" class="btn btn-success btn-lg"> Se connecter en tant qu'admin</button>
+
       </div>
       
     
