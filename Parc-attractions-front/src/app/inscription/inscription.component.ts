@@ -10,10 +10,11 @@ import { UtilisateurService } from '../utilisateur.service';
 })
 export class InscriptionComponent implements OnInit {
   myForm!: FormGroup;
-
+  
   constructor(private utilisateurService: UtilisateurService, private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
+    
     this.myForm = this.formBuilder.group({
       nom: ['', Validators.required],
       prenom: ['', Validators.required],
@@ -21,6 +22,7 @@ export class InscriptionComponent implements OnInit {
       ville: [''],
       voie: [''],
       cp: [''],
+     
       login: ['', Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(5)])]
     });

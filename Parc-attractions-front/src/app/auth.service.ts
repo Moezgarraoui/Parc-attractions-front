@@ -18,7 +18,7 @@ export class AuthService {
     this.http.post<Compte>(this.apiUrl, { "login": login, "password": password })
       .subscribe(
         resp => {
-          this.client = resp;
+          this.client= resp;
           this.currentClientId = resp.id; // Enregistre l'ID du client
           localStorage.setItem("user", JSON.stringify(this.client));
           localStorage.setItem("user_id",JSON.stringify(this.currentClientId));
@@ -43,6 +43,7 @@ export class AuthService {
     const client = this.getClient();
     return client !== undefined;
   }
+
 
   getClient(): Compte | undefined {
     if (this.client) {

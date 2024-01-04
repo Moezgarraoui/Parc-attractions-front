@@ -21,7 +21,6 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { PlanDuParcPageComponent } from './plan-du-parc-page/plan-du-parc-page.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     RestaurantsPageComponent,
     PlanDuParcPageComponent,
     InscriptionComponent,
-    ConnectionComponent
+    ConnectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,9 +46,9 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
