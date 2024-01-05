@@ -5,7 +5,7 @@
 
   }
   export class Reservation {
-    constructor(public id?: number, public dateReservation?:string, public dateFinReservation?:string, public hotel?:Hotel, public client?:Client) {
+    constructor(public id?: number, public dateReservation?:string, public dateFinReservation?:string, public hotel?:Hotel, public compte?:Compte) {
   
     }
 
@@ -34,7 +34,7 @@
   public password?: string;
   public admin?: boolean;
 
-  constructor(login: string, password: string, admin: boolean) {
+  constructor(login?: string, password?: string, admin?: boolean) {
     this.login = login;
     this.password = password;
     this.admin = admin;

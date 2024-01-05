@@ -1,13 +1,14 @@
 
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
-import { Client, Hotel, Repas, Reservation, Restaurant, Visiteur } from '../model';
+import { Client, Compte, Hotel, Repas, Reservation, Restaurant, Visiteur } from '../model';
 import { Observable } from 'rxjs';
 import { VisiteurService } from './visiteur.service';
 import { ReservationService } from './reservation.service';
 import { HotelService } from '../hotel-page/hotel.service';
 import { RestaurantService } from '../restaurants/restaurant.service';
 import { RepasService } from '../restaurants/repas.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-reservation-billets',
   templateUrl: './reservation-billets.component.html',
@@ -33,7 +34,7 @@ visiteursForm2!:FormGroup;
   repasLoad$!:Observable<Repas[]>;
   client!:Client;
 
-  constructor(private visiteurService: VisiteurService, private hotelService: HotelService, private reservationService: ReservationService,private restauService:RestaurantService, private formBuilder: FormBuilder, private repasService:RepasService) {
+  constructor(private visiteurService: VisiteurService, private router: Router, private hotelService: HotelService, private reservationService: ReservationService,private restauService:RestaurantService, private formBuilder: FormBuilder, private repasService:RepasService) {
   }
   ngOnInit(): void {
  
@@ -56,10 +57,9 @@ visiteursForm2!:FormGroup;
   }
   addReservation(){
     this.currentReservation=new Reservation();
-    let client:Client=new Client();
-    client.id=parseInt(localStorage.getItem('user_id')!,10);
-    
-    this.currentReservation.client=client;
+    let compte:Compte=new Compte();
+    compte.id=parseInt(localStorage.getItem('user_id')!,10);
+    this.currentReservation.compte=compte;
     this.reservationService.save(this.currentReservation).subscribe(resp=>{
       this.currentReservation=resp;
     });
@@ -99,7 +99,7 @@ visiteursForm2!:FormGroup;
     this.reservationService.save(this.currentReservation).subscribe(resp=>{
       this.loadReservations();
     })
-    
+    this.router.navigate(["./accueil"]);
   }
   ouvrirResHotel(){
     this.showResHotel=true;
